@@ -59,6 +59,7 @@ class Product(models.Model):
     )
     min_threshold = models.PositiveIntegerField(null=True, blank=True)
     supplied = ComputedBooleanField(compute_from="is_supplied")
+    barcode = models.CharField(max_length=100, blank=True, null=True)
 
     @property
     def is_supplied(self):
