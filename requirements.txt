@@ -1,0 +1,10 @@
+Django==4.1.7
+djangorestframework==3.14.0
+djangorestframework_simplejwt==5.2.2
+rest_framework_simplejwt==0.0.2
+django-cors-headers==3.14.0
+django-filter==23.1
+django-admin-rangefilter
+django-computed-property==0.3.0
+gunicorn
+whitenoise
