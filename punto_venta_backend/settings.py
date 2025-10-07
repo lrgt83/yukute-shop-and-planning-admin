@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-v6ym08xcqs8o5#cad1_le=z!sfo3(#5nm5h_-ryke9!h8u(8z6
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'localhost',
     'lrgt83.pythonanywhere.com',
 ]
 
@@ -151,6 +152,7 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
     'https://lrgt83.github.io',
 ]
 

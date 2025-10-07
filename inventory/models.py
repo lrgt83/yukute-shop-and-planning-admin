@@ -58,9 +58,13 @@ class Product(models.Model):
         default=InventoryType.SALABLE,
     )
     min_threshold = models.PositiveIntegerField(null=True, blank=True)
-    supplied = ComputedBooleanField(compute_from="is_supplied")
+    supplied = models.BooleanField(default=False)
     barcode = models.CharField(max_length=100, blank=True, null=True)
 
+    def save(self, *args, **kwargs):
+        self.supplied = self.is_supplied
+        super().save(*args, **kwargs)
+    
     @property
     def is_supplied(self):
         if self.min_threshold is not None and self.stock is not None:
